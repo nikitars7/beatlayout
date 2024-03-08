@@ -1,0 +1,51 @@
+.features {
+  @include adaptiv-value("padding-top", 170, 50, 1);
+  @include adaptiv-value("padding-bottom", 170, 50, 1);
+  &__container {
+  }
+
+  &__header {
+   
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    @include adaptiv-value("gap", 30, 20, 1);
+  }
+
+  &__item {
+  }
+}
+
+.item-feature {
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  &__image {
+    width: 100px;
+    height: 100px;
+    background-color: $blueColor;
+    border-radius: 26px;
+    box-shadow: 0 30px 60px 0 rgba(71, 74, 87, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+  }
+
+  &__text {
+    p {
+      font-weight: 500;
+      line-height: 187.5%; /* 30/16 */
+    }
+  }
+}

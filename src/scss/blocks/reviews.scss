@@ -1,0 +1,65 @@
+.reviews {
+  @include adaptiv-value("padding-bottom", 200, 50, 1);
+  &__container {
+  }
+
+  &__header {
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    @include adaptiv-value("gap", 51, 25, 1);
+  }
+
+  &__card {
+  }
+}
+
+.card-review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  padding: 40px;
+  border: 1px solid #dedede;
+  box-shadow: 0 2.767256498336792px 2.2138051986694336px 0 rgba(0, 0, 0, 0.02),
+    0 6.650102138519287px 5.32008171081543px 0 rgba(0, 0, 0, 0.03),
+    0 12.521552085876465px 10.017241477966309px 0 rgba(0, 0, 0, 0.04),
+    0 22.3363094329834px 17.869047164916992px 0 rgba(0, 0, 0, 0.04),
+    0 41.777610778808594px 33.422088623046875px 0 rgba(0, 0, 0, 0.05),
+    0 100px 80px 0 rgba(0, 0, 0, 0.07);
+  &__image {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    img {
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__about {
+    max-width: 250px;
+    text-align: center;
+    flex-grow: 1;
+    p {
+      font-weight: 500;
+      line-height: 187.5%; /* 30/16 */
+      letter-spacing: 0.20000000298023224px;
+    }
+  }
+
+  &__name {
+    font-weight: 500;
+    line-height: 187.5%; /* 30/16 */
+    letter-spacing: 0.20000000298023224px;
+    color: $lightBlue;
+  }
+
+  &__occupation {
+    @extend .card-review__name;
+    color: #181e4b;
+  }
+}

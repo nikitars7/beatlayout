@@ -1,0 +1,15 @@
+.footer {
+  @include adaptiv-value("min-height", 119, 40, 1);
+  background-color: $blueColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__container {
+  }
+
+  &__copyright {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+  }
+}

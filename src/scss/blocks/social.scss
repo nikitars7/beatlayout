@@ -1,0 +1,65 @@
+.social {
+  @include adaptiv-value("padding-bottom", 94, 40, 1);
+  &__container {
+    max-width: 830px;
+  }
+
+  &__body {
+    display: flex;
+    @include adaptiv-value("gap", 100, 30, 1);
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__column {
+    flex: 0 1 33.333%;
+    text-align: center;
+    &:first-child {
+      .social__title {
+        &:not(:last-child) {
+          margin-bottom: 25px;
+        }
+      }
+    }
+    &:nth-child(2),
+    &:nth-child(3) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @media (max-width: $mobile) {
+        gap: 25px;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    color: #000;
+    font-weight: 700;
+  }
+
+  &__logo {
+  }
+
+  &__images {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 26px;
+    @media (max-width: $mobile) {
+      margin-bottom: 0;
+      justify-content: center;
+      gap: 20px;
+    }
+  }
+
+  &__link {
+  }
+
+  &__image {
+  }
+
+  &__slogan {
+    margin-bottom: 26px;
+  }
+}

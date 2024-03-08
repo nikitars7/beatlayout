@@ -1,0 +1,26 @@
+.header-block {
+  font-weight: 800;
+  &__label {
+    font-size: 18px;
+    color: $blueColor;
+    letter-spacing: 2px;
+    line-height: 127.777778%; /* 23/18 */
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__title {
+    color: #000;
+    font-size: 48px;
+    line-height: 135.416667%; /* 65/48 */
+  }
+  &--margin {
+    @include adaptiv-value("margin-bottom", 90, 40, 1);
+  }
+}
+
+// <div class="header-block">
+// <div class="header-block__label">FEATURES</div>
+// <h2 class="header-block__title">What You Can Do?</h2>
+// </div>
